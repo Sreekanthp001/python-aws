@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "ec2_auto_stop_rule" {
     name              = "ec2-auto-stop-weekdays-8pm"
     description       = "Triggers EC2 auto-stop at 8 PM on weekdays"
-    schedule_expression = "cron(12 15 ? * MON-FRI *)"  # 8pm UTC, monday to friday
+    schedule_expression = "cron(26 12 ? * MON-FRI *)"  # 8pm UTC, monday to friday
 }
 
 resource "aws_cloudwatch_event_target" "ec2_auto_stop_target" {
